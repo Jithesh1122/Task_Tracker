@@ -1,0 +1,156 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app.light {
+  background: #f4f7fb;
+  color: #10233f;
+}
+
+.app.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.card {
+  width: min(680px, 100%);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.app.light .card {
+  background: #ffffff;
+  border: 1px solid #dbe3ef;
+}
+
+.app.dark .card {
+  background: #162033;
+  border: 1px solid #334155;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.task-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+input[type='text'] {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #94a3b8;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+}
+
+.app.dark input[type='text'] {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-color: #475569;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.app.light button {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.app.dark button {
+  background: #0ea5e9;
+  color: #0f172a;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.task {
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+}
+
+.app.light .task {
+  background: #eff5ff;
+}
+
+.app.dark .task {
+  background: #1e293b;
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.empty {
+  margin: 0.4rem 0 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+}
